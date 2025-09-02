@@ -1,0 +1,4 @@
+@use 'sass:color'
+
+@function darkenBorder($color)
+    @return color.adjust($color, $lightness: -10%)

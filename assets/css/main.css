@@ -96,4 +96,36 @@ body {
   width: 60%;
   display: block;
   margin: auto;
+}
+
+.btn, .btn--secondary, .btn--primary {
+  margin-top: 0.5rem;
+  margin-right: 1.5rem;
+  padding: 1rem 2rem;
+  border: solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.btn:hover, .btn--secondary:hover, .btn--primary:hover {
+  transform: translateY(-10px);
+}
+.btn--primary {
+  background-color: #55198b;
+  color: #ffffff;
+  border-color: rgb(58.5670731707, 17.2256097561, 95.7743902439);
+}
+.btn--primary:hover {
+  background-color: #ffffff;
+  color: #55198b;
+}
+.btn--secondary {
+  background-color: #aaa5ff;
+  color: #171c28;
+  border-color: rgb(121.8333333333, 114, 255);
+}
+.btn--secondary:hover {
+  background-color: #ffffff;
+  color: #aaa5ff;
 }/*# sourceMappingURL=main.css.map */
