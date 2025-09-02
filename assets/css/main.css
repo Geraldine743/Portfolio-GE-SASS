@@ -55,4 +55,45 @@ body {
 body {
   background-color: #171c28;
   color: #ffffff;
+  margin: 2rem;
+}
+
+.header-website {
+  height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-display {
+  display: flex;
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.text-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.illustration {
+  flex: 1;
+}
+
+.illustration-image {
+  width: 60%;
+  display: block;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
