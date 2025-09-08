@@ -166,4 +166,17 @@ body {
   justify-content: center;
   gap: 2rem;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .competences-icons {
+    font-size: 2.5rem;
+  }
+}
+.competences-icons i {
+  transition: all 0.3s ease;
+}
+.competences-icons i:hover {
+  cursor: pointer;
+  color: #aaa5ff;
+  transform: scale(1.2);
 }/*# sourceMappingURL=main.css.map */
