@@ -5,8 +5,12 @@
     @media screen and (min-width: 768px)
         &.left-text-content
             flex-direction: row
-        .illustration
-            padding-left: 5rem
+            .illustration
+                padding-left: 5rem
+        &.right-text-content
+            flex-direction: row-reverse
+            .illustration
+                padding-right: 5rem
 
 .text-content
     display: flex
@@ -36,6 +40,7 @@
 
 .illustration
     flex: 1
+    margin-top: 2rem
     .illustration-image
         max-width: 100%
         display: block

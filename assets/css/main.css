@@ -72,8 +72,14 @@ body {
   .section-display.left-text-content {
     flex-direction: row;
   }
-  .section-display .illustration {
+  .section-display.left-text-content .illustration {
     padding-left: 5rem;
+  }
+  .section-display.right-text-content {
+    flex-direction: row-reverse;
+  }
+  .section-display.right-text-content .illustration {
+    padding-right: 5rem;
   }
 }
 
@@ -114,6 +120,7 @@ body {
 
 .illustration {
   flex: 1;
+  margin-top: 2rem;
 }
 .illustration .illustration-image {
   max-width: 100%;
@@ -152,4 +159,11 @@ body {
 .btn--secondary:hover {
   background-color: #ffffff;
   color: #aaa5ff;
+}
+
+.competences-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
