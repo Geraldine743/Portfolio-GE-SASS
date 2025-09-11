@@ -1,3 +1,5 @@
+@use "../abstracts/_mixins" as mixin
+
 .section-display
     display: flex
     margin-bottom: 10rem
@@ -13,10 +15,9 @@
                 padding-right: 5rem
 
 .text-content
-    display: flex
+    @include mixin.display (flex, center, start)
     flex: 1
     flex-direction: column
-    justify-content: center
 
 .title
     margin-bottom: 2rem

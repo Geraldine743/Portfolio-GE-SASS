@@ -116,9 +116,10 @@ body {
 
 .text-content {
   display: flex;
+  justify-content: center;
+  align-items: start;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
 }
 
 .title {
@@ -208,6 +209,7 @@ body {
 @media screen and (max-width: 767px) {
   .logo {
     display: flex;
+    justify-content: start;
     align-items: center;
   }
   .logo img {
@@ -244,6 +246,7 @@ body {
 @media screen and (min-width: 768px) {
   .logo {
     display: flex;
+    justify-content: start;
     align-items: center;
   }
   .logo img {
@@ -258,8 +261,8 @@ body {
   .sidenav .nav-links {
     display: flex;
     justify-content: end;
-    gap: 3rem;
     align-items: center;
+    gap: 3rem;
   }
   .sidenav .nav-links .nav-link {
     font-size: 1.5rem;
@@ -273,6 +276,7 @@ body {
 .competences-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   font-size: 1.5rem;
 }

@@ -1,16 +1,14 @@
 @use "../abstracts/_variables" as var
+@use "../abstracts/_mixins" as mixin
 
 .navbar
     padding-top: 1.2rem
     padding-bottom: 0.4rem
-    display: flex
-    justify-content: space-between
-    align-items: center
+    @include mixin.display (flex, space-between, center)
 
 @media screen and (max-width: 767px)
     .logo
-        display: flex
-        align-items: center
+        @include mixin.display (flex, start, center)
         img
             width: 15rem
 
@@ -43,8 +41,7 @@
 
 @media screen and (min-width: 768px)
     .logo
-        display: flex
-        align-items: center
+        @include mixin.display (flex, start, center)
         img
             width: 20rem
 
@@ -55,10 +52,9 @@
             display: none
 
         .nav-links
-            display: flex
-            justify-content: end
+            @include mixin.display (flex, end, center)
             gap: 3rem
-            align-items: center
+
             .nav-link
                 font-size: 1.5rem
                 color: var.$white

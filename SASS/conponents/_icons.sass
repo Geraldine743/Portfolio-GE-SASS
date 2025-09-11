@@ -1,8 +1,9 @@
 @use "../abstracts/_variables" as var
+@use "../abstracts/_mixins" as mixin
 
 .competences-icons
-    display: flex
-    justify-content: center
+    @include mixin.display (flex, center, center)
+
     gap: 2rem
     font-size: 1.5rem
     @media screen and (min-width: 768px)
