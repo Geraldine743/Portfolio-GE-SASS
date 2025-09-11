@@ -9,12 +9,24 @@
 </head>
 <body>
     <header class="header-website">
-        HEADER
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logoGE.svg" alt="logo de Geraldine EXCOFFIER">
+            </div>
+            <div class="sidenav sidenav-js">
+                <a href="#" class="close" id="closeBtn">X</a>
+                <ul class="nav-links">
+                    <li class="nav-link closeLink"><a  href="#presentation">Présentation</a></li>
+                    <li class="nav-link closeLink"><a  href="#competences">Compétences</a></li>
+                </ul>
+            </div>
+            <a href="#" id="openBtn" class="menu-icon"><i class="fa-solid fa-bars"></i></a>
+        </nav>
     </header>
 
     <main class="flux">
 
-        <section class="section-display left-text-content">
+        <section class="section-display left-text-content" id="presentation">
             <article class="text-content">
                 <h1 class="title">EXCOFFIER Géraldine
                     <picture class="emoji-gif">
@@ -36,7 +48,7 @@
             </div>
         </section>
 
-        <section class="section-display right-text-content">
+        <section class="section-display right-text-content" id="competences">
             <article class="text-content">
                 <h2 class="title">Mes compétences</h2>
                 <p class="paragraph">
@@ -65,4 +77,6 @@
         FOOTER
     </footer>
 </body>
+
+<script src="assets/script.js"></script>
 </html>

@@ -1,0 +1,68 @@
+@use "../abstracts/_variables" as var
+
+.navbar
+    padding-top: 1.2rem
+    padding-bottom: 0.4rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@media screen and (max-width: 767px)
+    .logo
+        display: flex
+        align-items: center
+        img
+            width: 15rem
+
+    .sidenav
+        height: 100%
+        width: 250px
+        position: fixed
+        z-index: 1
+        top: 0
+        right: -250px
+        background-color: var.$primary
+        opacity: 0.90
+        padding-top: 60px
+        transition: all 0.3s ease
+
+        &.active
+            right: 0px
+
+        .close
+            position: absolute
+            top: 0
+            right: 0px
+            font-size: 2rem
+
+        a
+            padding: 1.5rem 1rem 1rem 3rem
+            display: block
+            font-size: 1.5rem
+            color: var.$white
+
+@media screen and (min-width: 768px)
+    .logo
+        display: flex
+        align-items: center
+        img
+            width: 20rem
+
+    .sidenav
+        width: 100%
+
+        .close
+            display: none
+
+        .nav-links
+            display: flex
+            justify-content: end
+            gap: 3rem
+            align-items: center
+            .nav-link
+                font-size: 1.5rem
+                color: var.$white
+                transition: all 0.3s ease
+
+                &:hover
+                    transform: scale(1.2)
