@@ -94,6 +94,54 @@ body {
   background-color: #171c28;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-hide {
+  0% {
+    display: flex;
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  99% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171c28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: loader-hide 1s forwards;
+}
+#loader .loader-shape {
+  border: 16px solid #ffffff;
+  border-top: 16px solid #55198b;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
 .section-display {
   display: flex;
   margin-bottom: 10rem;
