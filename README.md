@@ -9,6 +9,7 @@
 
 - HTML 5
 - SASS
+- Javascript
 
 ## Déploiement
 
