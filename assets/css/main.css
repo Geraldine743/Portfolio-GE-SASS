@@ -321,6 +321,14 @@ body {
     transform: scale(1.2);
   }
 }
+@keyframes showGrowth {
+  0% {
+    padding-right: 0%;
+  }
+  100% {
+    padding-right: 1%;
+  }
+}
 .competences-bars {
   display: flex;
   flex-direction: column;
@@ -339,7 +347,7 @@ body {
   background-color: #aaa5ff;
   height: 100%;
   border-radius: 10px;
-  border: 1px solid;
+  animation: showGrowth 1s ease infinite alternate;
 }
 
 .stack-technique-icons {
