@@ -255,6 +255,13 @@ footer .credits {
   color: #aaa5ff;
 }
 
+#gototop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 500;
+}
+
 .navbar {
   padding-top: 1.2rem;
   padding-bottom: 0.4rem;
