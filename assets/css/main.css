@@ -94,6 +94,15 @@ body {
   background-color: #171c28;
 }
 
+footer {
+  padding: 2rem;
+}
+footer .credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
