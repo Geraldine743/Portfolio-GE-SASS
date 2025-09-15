@@ -321,7 +321,7 @@ body {
     transform: scale(1.2);
   }
 }
-.competences-icons {
+.stack-technique-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,14 +329,14 @@ body {
   font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .competences-icons {
+  .stack-technique-icons {
     font-size: 2.5rem;
   }
 }
-.competences-icons i {
+.stack-technique-icons i {
   transition: all 0.3s ease;
 }
-.competences-icons i:hover {
+.stack-technique-icons i:hover {
   cursor: pointer;
   color: #aaa5ff;
   transform: scale(1.2);
