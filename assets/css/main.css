@@ -167,8 +167,8 @@ body {
   gap: 2rem;
 }
 .diplome .diplome-logo {
-  max-width: 6rem;
-  max-height: 6rem;
+  max-width: 6.5rem;
+  max-height: 6.5rem;
   border-radius: 100%;
 }
 
@@ -238,8 +238,8 @@ footer .credits {
   border: 16px solid #ffffff;
   border-top: 16px solid #55198b;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   animation: spin 1s linear infinite;
 }
 

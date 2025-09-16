@@ -1,11 +1,11 @@
+@use "../abstracts/_mixins" as mixin
+
 .diplome
     display: flex
     align-items: center
     gap: 2rem
     .diplome-logo
-        max-width: 6rem
-        max-height: 6rem
-        border-radius: 100%
+        @include mixin.circle (6.5rem)
 
 .diplome-title
     margin-bottom: 0.5rem
