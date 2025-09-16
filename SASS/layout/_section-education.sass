@@ -1,9 +1,26 @@
+@use "../abstracts/_variables" as var
 @use "../abstracts/_mixins" as mixin
 
 .diplome
     display: flex
     align-items: center
     gap: 2rem
+    position: relative
+    padding-bottom: 2.5rem
+    margin: 2rem 0rem
+    &:hover
+        &::after
+            width: 100%
+            background-color: var.$secondary
+    &::after
+        content: ""
+        width: 70%
+        height: 2px
+        background-color: var.$gray
+        position: absolute
+        bottom: 0
+        transition: all 1s ease
+
     .diplome-logo
         @include mixin.circle (6.5rem)
 
