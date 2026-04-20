@@ -3,10 +3,12 @@
 
 .navbar
     padding-top: 1.2rem
-    padding-bottom: 0.4rem
+    padding-bottom: 1.2rem
+    padding-right: 1.2rem
+    padding-left: 1.2rem
     @include mixin.display (flex, space-between, center)
 
-@media screen and (max-width: 767px)
+@media screen and (max-width: 768px)
     .logo
         @include mixin.display (flex, start, center)
         img
@@ -39,24 +41,24 @@
             font-size: 1.5rem
             color: var.$white
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 769px)
     .logo
         @include mixin.display (flex, start, center)
         img
-            width: 20rem
+            width: 15rem
 
     .sidenav
-        width: 100%
+        width: auto
 
         .close
             display: none
 
         .nav-links
             @include mixin.display (flex, end, center)
-            gap: 3rem
+            gap: 2.2rem
 
             .nav-link
-                font-size: 1.5rem
+                font-size: 1.3rem
                 color: var.$white
                 transition: all 0.3s ease
 

@@ -3,6 +3,7 @@ const openBtn = document.getElementById("openBtn")
 const closeBtn = document.getElementById("closeBtn")
 const closeLinks = document.querySelectorAll(".closeLink")
 
+
 openBtn.addEventListener('click', () => {
         openNav()
     })
