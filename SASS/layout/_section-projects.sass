@@ -1,0 +1,51 @@
+@use "../abstracts/_variables" as var
+@use "../abstracts/_mixins" as mixin
+
+.repo-card-grid
+    display: grid
+    grid-template-columns: 1fr 
+    gap: 2rem
+    margin-top: 3rem
+    width: 100%
+
+    @media screen and (min-width: 768px)
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+
+.card-projet
+    background-color: rgba(255, 255, 255, 0.03)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-radius: var.$border-radius
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease
+
+    &:hover
+        transform: translateY(-8px)
+        border-color: var.$primary
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+
+    .repo-name
+        font-size: 1.5rem
+        margin-bottom: 1rem
+        color: var.$white
+        text-transform: capitalize
+
+    .repo-description
+        font-size: 1rem
+        line-height: 1.5
+        margin-bottom: 1.5rem
+        color: rgba(255, 255, 255, 0.7)
+        flex-grow: 1
+
+    .repo-meta
+        @include mixin.display (flex, space-between, center)
+        margin-bottom: 1.5rem
+        font-size: 0.9rem
+        font-weight: 600
+
+        .repo-langage
+            color: var.$secondary
+
+        .repo-stars
+            color: #ffd700

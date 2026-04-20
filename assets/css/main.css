@@ -221,6 +221,61 @@ body {
   font-style: italic;
 }
 
+.repo-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .repo-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.card-projet {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-projet:hover {
+  transform: translateY(-8px);
+  border-color: #55198b;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card-projet .repo-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.card-projet .repo-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+.card-projet .repo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.card-projet .repo-meta .repo-langage {
+  color: #aaa5ff;
+}
+.card-projet .repo-meta .repo-stars {
+  color: #ffd700;
+}
+
 footer {
   padding: 2rem;
 }
