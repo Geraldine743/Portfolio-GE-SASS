@@ -51,4 +51,20 @@ async function fetchGitHubRepos() {
     }
 }
 
+function createRepoCard(repo) {
+    const div = document.createElement('div');
+    div.className = 'card-projet';
+    
+    div.innerHTML = `
+        <h3 class="repo-name">${repo.name}</h3>
+        <p class="repo-description">${repo.description || "Pas de description disponible."}</p>
+        <div class="repo-meta">
+            <span class="repo-langage">${repo.language || "HTML/CSS"}</span>
+            <span class="repo-stars"><i class="fa-solid fa-star"></i> ${repo.stargazers_count}</span>
+        </div>
+        <a href="${repo.html_url}" target="_blank" class="btn--primary">Voir le projet</a>
+    `;
+    return div;
+}
+
 fetchGitHubRepos();
