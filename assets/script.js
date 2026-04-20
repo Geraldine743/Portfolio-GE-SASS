@@ -7,18 +7,11 @@ const closeLinks = document.querySelectorAll(".closeLink")
 const githubContainer = document.getElementById('github-projects-container');
 
 
-openBtn.addEventListener('click', () => {
-        openNav()
-    })
-
-closeBtn.addEventListener('click', () => {
-        closeNav()
-    })
+openBtn.addEventListener('click', openNav)
+closeBtn.addEventListener('click', closeNav)
 
 closeLinks.forEach((closeLink) => {
-    closeLink.addEventListener('click', () => {
-        closeNav()
-    })
+    closeLink.addEventListener('click', closeNav)
 })
 
 function openNav (){
@@ -51,15 +44,26 @@ async function fetchGitHubRepos() {
     }
 }
 
+function echapperHTML(texte) {
+    if (!texte) return ""; 
+    const div = document.createElement('div');
+    div.textContent = texte; 
+    return div.innerHTML;
+}
+
 function createRepoCard(repo) {
     const div = document.createElement('div');
     div.className = 'card-projet';
     
+    const nomSecurise = echapperHTML(repo.name);
+    const descriptionSecurisee = echapperHTML(repo.description || "Pas de description disponible.");
+    const langageSecurise = echapperHTML(repo.language || "Code");
+
     div.innerHTML = `
-        <h3 class="repo-name">${repo.name}</h3>
-        <p class="repo-description">${repo.description || "Pas de description disponible."}</p>
+        <h3 class="repo-name">${nomSecurise}</h3>
+        <p class="repo-description">${descriptionSecurisee}</p>
         <div class="repo-meta">
-            <span class="repo-langage">${repo.language || "HTML/CSS"}</span>
+            <span class="repo-langage">${langageSecurise}</span>
             <span class="repo-stars"><i class="fa-solid fa-star"></i> ${repo.stargazers_count}</span>
         </div>
         <a href="${repo.html_url}" target="_blank" class="btn--primary">Voir le projet</a>
